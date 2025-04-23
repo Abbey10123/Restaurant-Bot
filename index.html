@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chat-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .chat-box {
+      height: 400px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #fafafa;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .message.bot {
+      color: #333;
+    }
+
+    .message.user {
+      text-align: right;
+      color: #007BFF;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Welcome to Our Restaurant</h2>
+    <div class="chat-box" id="chatBox">
+      <!-- Chat messages will appear here -->
+      <div class="message bot">Hello! I'm your restaurant assistant. Here are your options:</div>
+      <div class="message bot">1️⃣ Select <strong>1</strong> to view our menu</div>
+      <div class="message bot">9️⃣9️⃣ Select <strong>99</strong> to place your order</div>
+      <div class="message bot">9️⃣8️⃣ Select <strong>98</strong> to view your order history</div>
+      <div class="message bot">9️⃣7️⃣ Select <strong>97</strong> to view your current order</div>
+      <div class="message bot">❌ Select <strong>0</strong> to cancel your order</div>
+    </div>
+    <form id="chatForm">
+      <input type="text" id="userInput" placeholder="Enter your message..." />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
